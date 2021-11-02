@@ -35,7 +35,6 @@ class Calculator:
         """ multiply two numbers and get result"""
         self.result = self.result * value_a
         return self.result
-
     def divide_number_self(self, value_a):
         """ divide a number and get result"""
         if self == 0:
