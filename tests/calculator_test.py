@@ -51,4 +51,3 @@ def test_add_subtract_multiple_divide():
     calc.divide_number_self(5)
     assert calc.get_result() == 0
 
-

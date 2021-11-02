@@ -31,7 +31,6 @@ class Calculator:
             return self
         self.result = value_a / value_b
         return self.result
-
     def multiply_numbers_self(self, value_a):
         """ multiply two numbers and get result"""
         self.result = self.result * value_a
