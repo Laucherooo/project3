@@ -30,7 +30,7 @@ def test_calculator_subtract():
 def test_calculator_multiply():
     """ testing multiplication"""
     calc = Calculator()
-    alc.multiply_numbers(1,2)
+    calc.multiply_numbers(1,2)
     assert calc.get_result() == 2
 
 def test_add_subtract_multiple_divide():
