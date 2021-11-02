@@ -31,4 +31,22 @@ def test_calculator_multiply():
     """ testing multiplication"""
     calc = Calculator()
     result = calc.multiply_numbers(1,2)
-    assert result == 2
+    assert calc.get_result() == 2
+
+def test_add_subtract_multiple_divide():
+    """ testing add, subtract, multiple and divide"""
+    calc = Calculator()
+    result = calc.add_number(5)
+    assert calc.get_result() == 5
+
+    calc = Calculator()
+    result = calc.subtract_number(5)
+    assert calc.get_result() == -5
+
+    calc = Calculator()
+    result = calc.multiply_numbers(5, 5)
+    assert calc.get_result() == 25
+
+    calc = Calculator()
+    result = calc.divide_number(0, 5)
+    assert calc.get_result() == 0
