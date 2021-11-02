@@ -48,5 +48,9 @@ def test_add_subtract_multiple_divide():
     assert calc.get_result() == 25
 
     calc = Calculator()
-    calc.divide_number(5)
+    calc.divide_number(0, 5)
     assert calc.get_result() == 0
+
+    calc = Calculator()
+    calc.divide_number(5, 5)
+    assert calc.get_result() == 1
