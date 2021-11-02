@@ -30,23 +30,23 @@ def test_calculator_subtract():
 def test_calculator_multiply():
     """ testing multiplication"""
     calc = Calculator()
-    result = calc.multiply_numbers(1,2)
+    alc.multiply_numbers(1,2)
     assert calc.get_result() == 2
 
 def test_add_subtract_multiple_divide():
     """ testing add, subtract, multiple and divide"""
     calc = Calculator()
-    result = calc.add_number(5)
+    calc.add_number(5)
     assert calc.get_result() == 5
 
     calc = Calculator()
-    result = calc.subtract_number(5)
+    calc.subtract_number(5)
     assert calc.get_result() == -5
 
     calc = Calculator()
-    result = calc.multiply_numbers(5, 5)
+    calc.multiply_numbers(5, 5)
     assert calc.get_result() == 25
 
     calc = Calculator()
-    result = calc.divide_number(0, 5)
+    calc.divide_number(0, 5)
     assert calc.get_result() == 0
