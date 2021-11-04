@@ -75,4 +75,3 @@ class Calculator:
 
         # return addition.get_Result() <- work but v is better
         return Calculator.get_result_of_last_calculation_added_to_history()
-
