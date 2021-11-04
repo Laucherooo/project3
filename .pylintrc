@@ -88,7 +88,8 @@ disable=raw-checker-failed,
         use-symbolic-message-instead,
         C0116, # missing-function-docstring
         C0115, # missing-class-docstring
-        R0903 # too-few-public-methods
+        R0903, # too-few-public-methods
+        W0613 #unused argument
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
