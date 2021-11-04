@@ -20,12 +20,12 @@ class Calculator:
 
     @staticmethod
     def get_result_of_first_calculation_added_to_history():
-        return Calculator.history[0].getResult()
+        return Calculator.history[0].get_Result()
 
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
         # -1 gets the last item added to the list automaticly and you can expect it to have the get result method
-        return Calculator.history[-1].getResult()
+        return Calculator.history[-1].get_Result()
 
     @staticmethod
     def clear_history():
@@ -40,7 +40,7 @@ class Calculator:
         # addition = Addition(value_a, value_b) <- this is not good but will work. It will be repeated too much
         Calculator.add_calculation_to_history(addition)
 
-        #return addition.getResult() <- work but v is better
+        #return addition.get_Result() <- work but v is better
         return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod
@@ -51,7 +51,7 @@ class Calculator:
         # addition = Addition(value_a, value_b) <- this is not good but will work. It will be repeated too much
         Calculator.add_calculation_to_history(subtraction)
 
-        # return addition.getResult() <- work but v is better
+        # return addition.get_Result() <- work but v is better
         return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod
@@ -73,5 +73,5 @@ class Calculator:
         # addition = Addition(value_a, value_b) <- this is not good but will work. It will be repeated too much
         Calculator.add_calculation_to_history(division)
 
-        # return addition.getResult() <- work but v is better
+        # return addition.get_Result() <- work but v is better
         return Calculator.get_result_of_last_calculation_added_to_history()
