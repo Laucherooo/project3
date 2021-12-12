@@ -1,7 +1,7 @@
 """Testing the Calculator"""
 import pprint
 import pytest
-from calculator.calculator import Calculator
+from calc import Calculator
 
 @pytest.fixture
 def clear_history():

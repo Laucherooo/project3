@@ -1,4 +1,6 @@
 """A simple flask web app"""
+import sys,os
+sys.path.append(os.getcwd())
 from flask import Flask, request
 from flask import render_template
 from calc.calculator import Calculator

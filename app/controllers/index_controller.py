@@ -5,4 +5,3 @@ class IndexController(ControllerBase):
     @staticmethod
     def get():
         return render_template('index.html')
-

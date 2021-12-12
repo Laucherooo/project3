@@ -2,11 +2,17 @@
 #this is called a namespace it is like files and folders the classes are files and the folders organize the classes
 #It looks like a folder and file path but it is sort of a virtual representation of how the program is organized
 
-from calc.calculation import Calculation
+from calc.calculations.calculation import Calculation
 
 #This is how you extend the Addition class with the Calculation
-class Multiplication(Calculation):
-    """The multiplication class has one method to the the result of the calculation A and B come from the calculation parent class"""
+class Division(Calculation):
+    """The division class has one method to the the result of the calculation A and B come from the calculation parent class"""
     def get_Result(self):
         #you need to use self to reference the data contained in the instance of the object. This is encapsulation
-        return self.value_a * self.value_b
+        D_values = 0.0
+        for value in self.values:
+            if(D_values == 0.0):
+                D_values = value
+                continue
+            D_values = D_values / value
+        return D_values
