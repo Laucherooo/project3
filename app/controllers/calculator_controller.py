@@ -17,6 +17,7 @@ class CalculatorController(ControllerBase):
             value1 = float(value1)
             value2 = float(value2)
             # make the tuple
+
             if (operation == 'addition'):
                 result = value1 + value2
             elif (operation == 'substraction'):
@@ -25,7 +26,9 @@ class CalculatorController(ControllerBase):
                 result = value1 * value2
             elif (operation == 'division'):
                 result = value1 / value2
-            """my_tuple = (value1, value2)
+
+            """
+            my_tuple = (value1, value2)
             # this will call the correct operation
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculator.get_last_result_value())
@@ -35,7 +38,8 @@ class CalculatorController(ControllerBase):
                 'operation': [operation]
             }
             
-            Calculator.writeHistoryToCSV()"""
+            Calculator.writeHistoryToCSV()
+            """
             return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
             #return render_template('result.html', data = Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
         return render_template('calculator.html', error=error)
