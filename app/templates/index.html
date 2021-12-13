@@ -7,18 +7,10 @@
     </style>
 {% endblock %}
 {% block content %}
-    <h1>Index</h1>
+    <h1>HOMEPAGE</h1>
     <p class="important">
       Welcome to my awesome homepage.
-        <img src="{{ url_for('static', filename='images/sample.jpeg') }}">
-        <form action = "form_action.asp" method = "get">
-            Value1: <br>
-            <input type = "float" name = "value1" ><br>
-            Value2: <br>
-            <input type = "float" name = "value2" ><br>
-            Operaton: <br>
-            <input type = "text" name = "operaton" ><br>
-            <input type = "submit" value = "Submit"><br><br>
-        </form>
+        <img src="{{ url_for('static', filename='images/homepage.png') }}"><br>
+        <a href="calculator">Click here to the calculator!</a><br>
     </p>
 {% endblock %}
