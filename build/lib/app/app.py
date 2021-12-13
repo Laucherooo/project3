@@ -1,7 +1,7 @@
 """A simple flask web app"""
 from flask import Flask
-from app.controllers.index_controller import IndexController
-from app.controllers.calculator_controller import CalculatorController
+from controllers.index_controller import IndexController
+from controllers.calculator_controller import CalculatorController
 from werkzeug.debug import DebuggedApplication
 
 
