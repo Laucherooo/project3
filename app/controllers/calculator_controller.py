@@ -25,7 +25,7 @@ class CalculatorController(ControllerBase):
                 'operation': [operation]
             }
             Calculator.writeHistoryToCSV()
-            return render_template('result.html', data = Calculator.getHistory(), value1 = value1, value2 = value2, operation = operation, result = result)
+            return render_template('result.html', data = Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
         return render_template('calculator.html', error=error)
     @staticmethod
     def get():
