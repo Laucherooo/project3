@@ -3,6 +3,7 @@ from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
 from calc.calculations.division import Division
+import csv
 
 class Calculations:
     """Calculations class manages the history of calculations"""
@@ -12,8 +13,13 @@ class Calculations:
     def readHistoryFromCSV():
         """Read the history from csv and put it into the history """
     @staticmethod
-    def writeHistoryToCSV():
+    def writeHistoryToCSV(data):
         """Write the history to csv file"""
+        path = 'history.csv'
+        f = open(path, 'a')
+        #h = Calculations.get_last_calculation_result_value()
+        f.write(f"{data}\n")
+        f.close()
     # pylint: disable=too-few-public-methods
     @staticmethod
     def clear_history():
@@ -32,7 +38,7 @@ class Calculations:
     def get_last_calculation_result_value():
         """get last calculation"""
         calculation = Calculations.get_last_calculation_object()
-        return calculation.get_result()
+        return calculation.get_Result()
     @staticmethod
     def get_first_calculation():
         """get first calculation"""

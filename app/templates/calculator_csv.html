@@ -19,10 +19,12 @@
   <div class="mb-3 row">
 
     <form action="/calculator_csv" method="POST">
-        <label for="value1" class="col-sm-2 col-form-label">Value 1:</label><br>
-        <input type="text" id="value1" name="value1"><br>
-        <label for="value2" class="col-sm-2 col-form-label">Value 2:</label><br>
-        <input type="text" id="value2" name="value2"><br>
+        <div>
+            <form action="upload" method="post" enctype="multipart/form-data">
+                <input type="file" multiple="" name="file[]" class="span3"><br/>
+                <input type="submit" value="Upload" class="span2">
+            </form>
+        </div>
         <fieldset>
         <legend>Operation</legend>
           <div>

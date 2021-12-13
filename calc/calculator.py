@@ -40,6 +40,6 @@ class Calculator:
         """ Get history """
         return Calculations.readHistoryFromCSV()
     @staticmethod
-    def writeHistoryToCSV():
+    def writeHistoryToCSV(data):
         """ Get history """
-        return Calculations.writeHistoryToCSV()
+        return Calculations.writeHistoryToCSV(data)

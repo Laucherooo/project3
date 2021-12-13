@@ -2,13 +2,13 @@
 class Calculation:
     """ calculation abstract base class"""
     # pylint: disable=too-few-public-methods
-    def __init__(self,values: tuple):
+    def __init__(self, values: tuple):
         """ constructor method"""
         self.values = Calculation.convert_args_to_tuple_of_float(values)
     @classmethod
-    def create(cls.values: tuple):
+    def create(cls, values: tuple):
         """ factory method"""
-        return cls.values
+        return cls(values)
     @staticmethod
     def convert_args_to_tuple_of_float(values: tuple):
         """ standardize values to list of floats"""

@@ -1,10 +1,38 @@
 from app.controllers.controller import ControllerBase
 from calc.calculator import Calculator
-from flask import render_template, request, flash
+from flask import render_template, request, flash, redirect, url_for
+from werkzeug.utils import secure_filename
+import os
 
 
 class CalculatorController_csv(ControllerBase):
     @staticmethod
+    def post():
+        if request.method == 'POST':
+            uploaded_files = request.files.getlist("file[]")
+            filenames = []
+        for file in uploaded_files:
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            filenames.append(filename)
+        mytuple = [i for i in uploaded_files]
+        tuple(mytuple)
+        result = 0.0
+        # this will call the correct operation
+        getattr(Calculator, operation)(my_tuple)
+        if (operation == 'addition'):
+            Calculator.addition(my_tuple)
+        elif (operation == 'substraction'):
+            Calculator.subtraction(my_tuple)
+        elif (operation == 'multiplication'):
+            Calculator.multiplication(my_tuple)
+        elif (operation == 'division'):
+            Calculator.division(my_tuple)
+        result = str(Calculator.get_last_result_value())
+        data = (value1, value2, operation)
+        Calculator.writeHistoryToCSV()
+        return render_template('result.html', data=Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
+    '''
     def post():
         if request.form['value1'] == '' or request.form['value2'] == '':
             error = 'You must enter a value for value 1 and or value 2'
@@ -20,7 +48,7 @@ class CalculatorController_csv(ControllerBase):
             my_tuple = (value1, value2)
             result = 0.0
             # this will call the correct operation
-            #getattr(Calculator, operation)(my_tuple)
+            getattr(Calculator, operation)(my_tuple)
             if (operation == 'addition'):
                 Calculator.addition(my_tuple)
             elif (operation == 'substraction'):
@@ -34,7 +62,7 @@ class CalculatorController_csv(ControllerBase):
             Calculator.writeHistoryToCSV()
             return render_template('result.html', data=Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
         return render_template('calculator_csv.html', error=error)
-
+    '''
     @staticmethod
     def get():
         return render_template('calculator_csv.html')
