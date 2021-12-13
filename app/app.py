@@ -2,6 +2,7 @@
 from flask import Flask
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalculatorController
+from app.controllers.calculator_controller_csv import CalculatorController_csv
 from werkzeug.debug import DebuggedApplication
 
 
@@ -20,3 +21,12 @@ def calculator_get():
 @app.route("/calculator", methods=['POST'])
 def calculator_post():
     return CalculatorController.post()
+
+@app.route("/calculator_csv", methods=['GET'])
+def calculator_csv_get():
+    return CalculatorController_csv.get()
+
+@app.route("/calculator_csv", methods=['POST'])
+def calculator_csv_post():
+    return CalculatorController_csv.post()
+
