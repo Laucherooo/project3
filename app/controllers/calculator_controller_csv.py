@@ -17,33 +17,24 @@ class CalculatorController_csv(ControllerBase):
             value1 = float(value1)
             value2 = float(value2)
             # make the tuple
-
-            if (operation == 'addition'):
-                result = value1 + value2
-            elif (operation == 'substraction'):
-                result = value1 - value2
-            elif (operation == 'multiplication'):
-                result = value1 * value2
-            elif (operation == 'division'):
-                result = value1 / value2
-
-            """
             my_tuple = (value1, value2)
+            result = 0.0
             # this will call the correct operation
-            getattr(Calculator, operation)(my_tuple)
+            #getattr(Calculator, operation)(my_tuple)
+            if (operation == 'addition'):
+                Calculator.addition(my_tuple)
+            elif (operation == 'substraction'):
+                Calculator.subtraction(my_tuple)
+            elif (operation == 'multiplication'):
+                Calculator.multiplication(my_tuple)
+            elif (operation == 'division'):
+                Calculator.division(my_tuple)
             result = str(Calculator.get_last_result_value())
-            data = {
-                'value1': [value1],
-                'value2': [value2],
-                'operation': [operation]
-            }
-
+            data = (value1, value2, operation)
             Calculator.writeHistoryToCSV()
-            """
-            return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
-            # return render_template('result.html', data = Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
-        return render_template('calculator.html', error=error)
+            return render_template('result.html', data=Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
+        return render_template('calculator_csv.html', error=error)
 
     @staticmethod
     def get():
-        return render_template('calculator.html')
+        return render_template('calculator_csv.html')
