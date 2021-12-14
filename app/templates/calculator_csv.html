@@ -16,15 +16,10 @@
              {{ error }}
         </div>
       {% endif %}
+
   <div class="mb-3 row">
 
-    <form action="/calculator_csv" method="POST">
-        <div>
-            <form action="upload" method="post" enctype="multipart/form-data">
-                <input type="file" multiple="" name="file[]" class="span3"><br/>
-                <input type="submit" value="Upload" class="span2">
-            </form>
-        </div>
+    <form action="/calculator_csv" method="POST" enctype="multipart/form-data">
         <fieldset>
         <legend>Operation</legend>
           <div>
@@ -42,9 +37,12 @@
             <input type="radio" name="operation" id="division" value="division">
             <label for="division">division</label>
           </div>
+          <input type=file name="file_csv"/><br/>
+          <input type="submit" value="Submit">
         </fieldset>
-
-        <input type="submit" value="Submit">
     </form>
+
+
   </div>
+
 {% endblock %}

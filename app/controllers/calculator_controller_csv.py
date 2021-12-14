@@ -2,67 +2,41 @@ from app.controllers.controller import ControllerBase
 from calc.calculator import Calculator
 from flask import render_template, request, flash, redirect, url_for
 from werkzeug.utils import secure_filename
-import os
-
+import csv
 
 class CalculatorController_csv(ControllerBase):
     @staticmethod
     def post():
         if request.method == 'POST':
-            uploaded_files = request.files.getlist("file[]")
-            filenames = []
-        for file in uploaded_files:
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            filenames.append(filename)
-        mytuple = [i for i in uploaded_files]
-        tuple(mytuple)
-        result = 0.0
-        # this will call the correct operation
-        getattr(Calculator, operation)(my_tuple)
-        if (operation == 'addition'):
-            Calculator.addition(my_tuple)
-        elif (operation == 'substraction'):
-            Calculator.subtraction(my_tuple)
-        elif (operation == 'multiplication'):
-            Calculator.multiplication(my_tuple)
-        elif (operation == 'division'):
-            Calculator.division(my_tuple)
-        result = str(Calculator.get_last_result_value())
-        data = (value1, value2, operation)
-        Calculator.writeHistoryToCSV()
-        return render_template('result.html', data=Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
-    '''
-    def post():
-        if request.form['value1'] == '' or request.form['value2'] == '':
-            error = 'You must enter a value for value 1 and or value 2'
-        else:
-            flash('You successfully calculated')
-            # get the values out of the form
-            value1 = request.form['value1']
-            value2 = request.form['value2']
-            operation = request.form['operation']
-            value1 = float(value1)
-            value2 = float(value2)
-            # make the tuple
-            my_tuple = (value1, value2)
-            result = 0.0
-            # this will call the correct operation
-            getattr(Calculator, operation)(my_tuple)
-            if (operation == 'addition'):
-                Calculator.addition(my_tuple)
-            elif (operation == 'substraction'):
-                Calculator.subtraction(my_tuple)
-            elif (operation == 'multiplication'):
-                Calculator.multiplication(my_tuple)
-            elif (operation == 'division'):
-                Calculator.division(my_tuple)
-            result = str(Calculator.get_last_result_value())
-            data = (value1, value2, operation)
-            Calculator.writeHistoryToCSV()
-            return render_template('result.html', data=Calculator.getHistory(), value1=value1, value2=value2, operation=operation, result=result)
-        return render_template('calculator_csv.html', error=error)
-    '''
+            if 'file_csv' not in request.files:
+                flash('No file uploaded.')
+                return render_template('calculator_csv.html')
+            else:
+                flash('File received!')
+                file = request.files["file_csv"]
+                F = file.read()
+                F1 = str(F).replace("'", " ").replace("\\", " ").replace("n", " ")
+                numbers = [int(temp)for temp in F1.split() if temp.isdigit()]
+                my_tuple = numbers
+                tuple(my_tuple)
+                operation = request.form['operation']
+                # this will call the correct operation
+                getattr(Calculator, operation)(my_tuple)
+                if (operation == 'addition'):
+                    Calculator.addition(my_tuple)
+                elif (operation == 'substraction'):
+                    Calculator.subtraction(my_tuple)
+                elif (operation == 'multiplication'):
+                    Calculator.multiplication(my_tuple)
+                elif (operation == 'division'):
+                    Calculator.division(my_tuple)
+                result = str(Calculator.get_last_result_value())
+                data = (my_tuple, operation)
+                Calculator.writeHistoryToCSV(data)
+                return render_template('result_csv.html', data=Calculator.getHistory(), my_tuple=my_tuple,
+                                       operation=operation, result=result)
+        return render_template('calculator_csv.html')
+
     @staticmethod
     def get():
         return render_template('calculator_csv.html')
