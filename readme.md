@@ -4,88 +4,88 @@ Project 3
 
 [Demonstration Video 100 sec](https://github.com/Laucherooo/project3/blob/main/Demo/demonstration_100sec.mov)
 
-==============================================================================
-HOMEPAGE:
+==============================================================================  
+HOMEPAGE:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/1.png)
 
-==============================================================================
-Calculater:
+==============================================================================  
+Calculator:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/2.png)
 
-==============================================================================
-Addition:
+==============================================================================  
+Addition:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/3.png)
 
-==============================================================================
-Subtraction:
+==============================================================================  
+Subtraction:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/4.png)
 
-==============================================================================
-Multiplication:
+==============================================================================  
+Multiplication:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/5.png)
 
-==============================================================================
-Division:
+==============================================================================  
+Division:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/6.png)
 
-==============================================================================
-Division if denominator is a 0:
+==============================================================================  
+Division if denominator is a 0:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/7.png)
 
-==============================================================================
-Division if denominator is a 0 pops out alert:
+==============================================================================  
+Division if denominator is a 0 pops out alert:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/8.png)
 
-==============================================================================
-Addition in CSV file:
+==============================================================================  
+Addition in CSV file:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/9.png)
 
-==============================================================================
-Subtraction in CSV file:
+==============================================================================  
+Subtraction in CSV file:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/10.png)
 
-==============================================================================
-Subtraction in CSV file:
+==============================================================================  
+Subtraction in CSV file:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/11.png)
 
-==============================================================================
-Multiplication in CSV file:
+==============================================================================  
+Multiplication in CSV file:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/12.png)
 
-==============================================================================
-Multiplication in CSV file when there is a 0 in the file:
+==============================================================================  
+Multiplication in CSV file when there is a 0 in the file:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/13.png)
 
-==============================================================================
-Division in CSV file when there is a 0 in the file:
+==============================================================================  
+Division in CSV file when there is a 0 in the file:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/14.png)
 
-==============================================================================
-Division in CSV file when there is a 0 in the file pops out alert:
+==============================================================================  
+Division in CSV file when there is a 0 in the file pops out alert:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/15.png)
 
-==============================================================================
-Division in CSV file:
+==============================================================================  
+Division in CSV file:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/16.png)
 
-==============================================================================
-All history stored in history.csv:
+==============================================================================  
+All history stored in history.csv:  
 
 ![image](https://github.com/Laucherooo/project3/blob/main/Demo/17.png)
 
