@@ -9,7 +9,7 @@ class Subtraction(Calculation):
     """The subtraction class has one method to the the result of the calculation A and B come from the calculation parent class"""
     def get_Result(self):
         #you need to use self to reference the data contained in the instance of the object. This is encapsulation
-        difference_of_values = 0.0
-        for value in self.values:
-            difference_of_values = difference_of_values - value
+        difference_of_values = self.values[0]
+        for value in range(len(self.values)-1):
+            difference_of_values = difference_of_values - self.values[value+1]
         return difference_of_values

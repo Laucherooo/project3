@@ -10,7 +10,7 @@ class Multiplication(Calculation):
     """The multiplication class has one method to the the result of the calculation A and B come from the calculation parent class"""
     def get_Result(self):
         #you need to use self to reference the data contained in the instance of the object. This is encapsulation
-        result = 1.0
-        for value in self.values:
-            result = result * value
+        result = self.values[0]
+        for value in range(len(self.values) - 1):
+            result = result / self.values[value + 1]
         return result
