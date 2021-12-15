@@ -12,5 +12,5 @@ class Multiplication(Calculation):
         #you need to use self to reference the data contained in the instance of the object. This is encapsulation
         result = self.values[0]
         for value in range(len(self.values) - 1):
-            result = result / self.values[value + 1]
+            result = result * self.values[value + 1]
         return result

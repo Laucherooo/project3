@@ -9,7 +9,7 @@ class CalculatorController(ControllerBase):
         if request.form['value1'] == '' or request.form['value2'] == '':
             error = 'You must enter a value for value 1 and or value 2'
         else:
-            flash('You successfully calculated')
+            # flash('You successfully calculated')
             # get the values out of the form
             value1 = request.form['value1']
             value2 = request.form['value2']
@@ -27,7 +27,11 @@ class CalculatorController(ControllerBase):
             elif (operation == 'multiplication'):
                 Calculator.multiplication(my_tuple)
             elif (operation == 'division'):
-                Calculator.division(my_tuple)
+                if (value2 == 0):
+                    error = 'Denominator can not be a 0!'
+                    return render_template('calculator.html', error=error)
+                else:
+                    Calculator.division(my_tuple)
             result = str(Calculator.get_last_result_value())
             '''
             data = {

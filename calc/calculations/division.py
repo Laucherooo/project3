@@ -9,10 +9,7 @@ class Division(Calculation):
     """The division class has one method to the the result of the calculation A and B come from the calculation parent class"""
     def get_Result(self):
         #you need to use self to reference the data contained in the instance of the object. This is encapsulation
-        D_values = 0.0
-        for value in self.values:
-            if(D_values == 0.0):
-                D_values = value
-                continue
-            D_values = D_values / value
-        return D_values
+        result = self.values[0]
+        for value in range(len(self.values) - 1):
+            result = result / self.values[value + 1]
+        return result
