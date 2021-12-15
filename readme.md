@@ -6,8 +6,8 @@ Project 3
 
 ==============================================================================  
 HOMEPAGE:  
-<img width="250" height="250" scr="https://github.com/Laucherooo/project3/blob/main/Demo/1.png"/>
-![image](https://github.com/Laucherooo/project3/blob/main/Demo/1.png =250x250)
+
+![image](https://github.com/Laucherooo/project3/blob/main/Demo/1.png)
 
 ==============================================================================  
 Calculator:  
