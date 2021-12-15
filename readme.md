@@ -1,8 +1,10 @@
 Project 3
 
-[Demonstration Video 30 sec](https://github.com/Laucherooo/project3/blob/main/Demo/demonstration_30sec.mov)
+[30 sec demonstration video file](https://github.com/Laucherooo/project3/blob/main/Demo/demonstration_30sec.mov)
+[Watch 30 sec demonstration video on Youtube](https://youtu.be/Vl27Y-8-K64)
 
-[Demonstration Video 100 sec](https://github.com/Laucherooo/project3/blob/main/Demo/demonstration_100sec.mov)
+[100 sec demonstration video file](https://github.com/Laucherooo/project3/blob/main/Demo/demonstration_100sec.mov)
+[Watch 100 sec demonstration video on Youtube](https://youtu.be/0rn90lBevQ8)
 
 ==============================================================================  
 HOMEPAGE:  
